@@ -14,5 +14,8 @@ Recommended Size (minimum)
 
 -Additional
   /usr    : 10 GiB
-  /var    : 5 GiB
+  /var    : 5 GiB (?)
   /tmp    : 5 GiB
+
+-for ORALCE
+  /u01    : 22 GiB
