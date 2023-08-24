@@ -4,7 +4,7 @@
 
 Mandatory Volumes
   - /boot    : 1 GiB
-  - /(root)  : 5-10 GiB
+  - /        : 5-10 GiB
   - /home    : 1 GiB (?)
   - /swap    :
   	- RAM<2 		= 2*RAM
@@ -17,7 +17,7 @@ Recommended
 
 Additional
   - /usr    : 10 GiB
-  - /var    : 5 GiB (?)
+  - /var    : 5-10 GiB (?)
   - /tmp    : 5 GiB
 
 for ORALCE
@@ -31,3 +31,9 @@ for PostgreSQL
 - RAM : 4 GiB
 - Disk : 10-20 GiB
 - Graphic : 1026x768
+
+## Post Installation
+```
+
+```
+
