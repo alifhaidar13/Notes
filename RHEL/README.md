@@ -34,6 +34,10 @@ for PostgreSQL
 
 ## Post Installation
 ```
-
+yum update
+reboot
+yum groupinstall "Development Tools"
+yum install kernel-devel elfutils-libelf-devel
+#Then Install Guest Addition
 ```
 
