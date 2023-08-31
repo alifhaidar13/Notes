@@ -1,3 +1,15 @@
+### Database Information
+![image](https://github.com/alifhaidar13/Notes/assets/142615365/402312e6-2f41-4a9c-b713-8ef659cdcaf9)
+
+```
+select   NAME,
+         CREATED,
+         LOG_MODE,
+         CHECKPOINT_CHANGE#,
+         ARCHIVE_CHANGE#
+from     sys.v_$database;
+```
+
 ### Database Startup Time
 ![image](https://github.com/alifhaidar13/Notes/assets/142615365/48c0b84b-764c-4d11-9a5f-d8748d0c26b0)
 
