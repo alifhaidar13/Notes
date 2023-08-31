@@ -1,4 +1,5 @@
 ### Redo Log Switch History (Hourly)
+![image](https://github.com/alifhaidar13/Notes/assets/142615365/a46d934e-b7ea-43fa-b16f-31071eb10d1a)
 ```
 set linesize 100
 col DAY format a15
@@ -55,4 +56,3 @@ from sys.v_$log_history
 group by substr(to_char(FIRST_TIME,'DY, YYYY/MM/DD'),1,15)
 order by substr(to_char(FIRST_TIME,'DY, YYYY/MM/DD'),1,15) desc;
 ```
-![image](https://github.com/alifhaidar13/Notes/assets/142615365/a46d934e-b7ea-43fa-b16f-31071eb10d1a)
