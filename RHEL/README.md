@@ -33,9 +33,13 @@ for PostgreSQL
 - Graphic : 1026x768
 
 ## Post Installation
+### Update
 ```
 yum update
 reboot
+```
+### Install Guest Addition
+```
 yum groupinstall "Development Tools"
 yum install kernel-devel elfutils-libelf-devel
 #Then Install Guest Addition
