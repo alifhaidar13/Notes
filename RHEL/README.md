@@ -38,15 +38,40 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/in
 - Graphic : 1026x768
 
 ## Post Installation
+### Subscription Register
+```
+subscription-manager register --username=<username> --password=<password>
+subscription-manager status
+subscription-manager syspurpose service-level --set "Self-Support"
+subscription-manager syspurpose usage --set "Development/Test
+subscription-manager syspurpose --show"
+```
 ### Update
 ```
-yum update
+dnf update
 reboot
 ```
 ### Install Guest Addition
+- Check grouplist Development Tools
 ```
-yum groupinstall "Development Tools"
-yum install kernel-devel elfutils-libelf-devel
+dnf grouplist installed | grep Dev*
+```
+- Check package (kernel-devel & elfluits)
+```
+dnf list installed | grep kernel-devel
+dnf list installed | grep elfutils-libelf-devel
+```
+- Install Development Tools and kernel-devel 
+```
+dnf groupinstall "Development Tools"
+dnf install kernel-devel elfutils-libelf-devel
+
 #Then Install Guest Addition
 ```
+### Addtional
+```
+ln -sfn /dev/null /etc/motd.d/cockpit
 
+vi /etc/pam.d/sshd
+# session    optional     pam_motd.so
+```
