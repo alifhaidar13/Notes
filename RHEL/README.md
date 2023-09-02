@@ -3,9 +3,9 @@
 ## Recommended Size (minimum)
 
 Mandatory Volumes
-  - /boot    : 1 GiB
+  - /boot    : 500 MiB - 1 GiB
   - /        : 5-10 GiB
-  - /home    : 1 GiB (?)
+  - /home    : 500 MiB - 1 GiB
   - /swap    :
   	- RAM<2 		= 2*RAM
     - 2<RAM<8 	= 1*RAM
@@ -24,7 +24,17 @@ for ORALCE
   - /u01    : 22 GiB
 
 for PostgreSQL
-  - /var/lib/pgsql/data
+  - /var/lib/pgsql/data : 1 GiB
+
+### My Setting
+  - /boot  : 500 MiB
+  - /home  : 500 MiB
+  - /      : 5 GiB +
+    - Oracle      => 25 GiB
+    - Postgresql  => 5 GiB
+  - /swap  : 8 GiB
+  - /boot/efi  : 200 MiB
+  - /tmp   : 2 GiB
 
 ## Other Requirement
 
