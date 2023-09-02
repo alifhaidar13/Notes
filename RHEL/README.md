@@ -52,6 +52,7 @@ dnf update
 reboot
 ```
 ### Install Guest Addition
+
 - Check grouplist Development Tools
 ```
 dnf grouplist installed | grep Dev*
@@ -68,10 +69,15 @@ dnf install kernel-devel elfutils-libelf-devel
 
 #Then Install Guest Addition
 ```
+### Enable SSHD
+```
+vi /etc/ssh/sshd_config
+PermitRootLogin yes
+PasswordAuthentication yes
+```
 ### Addtional
 ```
 ln -sfn /dev/null /etc/motd.d/cockpit
-
 vi /etc/pam.d/sshd
 # session    optional     pam_motd.so
 ```
