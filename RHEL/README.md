@@ -75,6 +75,7 @@ dnf install kernel-devel elfutils-libelf-devel
 vi /etc/ssh/sshd_config
 PermitRootLogin yes
 PasswordAuthentication yes
+systemctl reload sshd.service
 ```
 ### Addtional
 ```
