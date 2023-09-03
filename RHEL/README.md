@@ -42,6 +42,7 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/in
 ```
 subscription-manager register --username=<username> --password=<password>
 subscription-manager status
+subscription-manager syspurpose role --set "Red Hat Enterprise Linux Server"
 subscription-manager syspurpose service-level --set "Self-Support"
 subscription-manager syspurpose usage --set "Development/Test
 subscription-manager syspurpose --show"
