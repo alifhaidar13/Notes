@@ -77,6 +77,19 @@ PermitRootLogin yes
 PasswordAuthentication yes
 systemctl reload sshd.service
 ```
+### Install Cockpit
+```
+dnf install cockpit
+systemctl enable --now cockpit.socket
+firewall-cmd --add-service=cockpit --permanent
+firewall-cmd --reload
+```
+- Enable root access
+```
+cat /etc/cockpit/disallowed-users
+#List of users which are not allowed to login to Cockpit
+root     <-REMOVE
+```
 ### Addtional
 ```
 ln -sfn /dev/null /etc/motd.d/cockpit
