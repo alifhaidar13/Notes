@@ -92,6 +92,9 @@ Complete!
 ```
 ## Install the package
 ```
+dnf -y install edb-as<xx>-server
+<xx> = version
+dnf -y install edb-as12-server
 dnf -y install edb-as15-server
 ```
 - Create password
