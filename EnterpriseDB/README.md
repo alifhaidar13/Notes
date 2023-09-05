@@ -97,9 +97,153 @@ dnf -y install edb-as<xx>-server
 dnf -y install edb-as12-server
 dnf -y install edb-as15-server
 ```
+- Output
+```
+Updating Subscription Management repositories.
+enterprisedb-enterprise                                 322  B/s | 659  B     00:02
+enterprisedb-enterprise-noarch                          592  B/s | 659  B     00:01
+enterprisedb-enterprise-noarch                           19 kB/s |  34 kB     00:01
+enterprisedb-enterprise-source                          420  B/s | 659  B     00:01
+enterprisedb-enterprise-source                          133  B/s | 291  B     00:02
+Extra Packages for Enterprise Linux 9 - x86_64          550 kB/s |  19 MB     00:34
+Extra Packages for Enterprise Linux 9 openh264 (From Ci 207  B/s | 2.5 kB     00:12
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS (RPMs)   1.2 kB/s | 4.1 kB     00:03
+Red Hat Enterprise Linux 9 for x86_64 - AppStream (RPMs 839  B/s | 4.5 kB     00:05
+Red Hat Enterprise Linux 9 for x86_64 - AppStream (RPMs 1.4 MB/s |  24 MB     00:17
+Dependencies resolved.
+========================================================================================
+ Package                     Arch   Version      Repository                        Size
+========================================================================================
+Installing:
+ edb-as15-server             x86_64 15.4.0-1.el9 enterprisedb-enterprise          9.8 k
+Installing dependencies:
+ boost-atomic                x86_64 1.75.0-8.el9 rhel-9-for-x86_64-appstream-rpms  19 k
+ boost-chrono                x86_64 1.75.0-8.el9 rhel-9-for-x86_64-appstream-rpms  26 k
+ boost-date-time             x86_64 1.75.0-8.el9 rhel-9-for-x86_64-appstream-rpms  15 k
+ edb-as15-pgagent            x86_64 4.2.2-1.el9  enterprisedb-enterprise          125 k
+ edb-as15-server-client      x86_64 15.4.0-1.el9 enterprisedb-enterprise          1.4 M
+ edb-as15-server-contrib     x86_64 15.4.0-1.el9 enterprisedb-enterprise          746 k
+ edb-as15-server-core        x86_64 15.4.0-1.el9 enterprisedb-enterprise          6.5 M
+ edb-as15-server-devel       x86_64 15.4.0-1.el9 enterprisedb-enterprise          6.2 M
+ edb-as15-server-docs        x86_64 15.4.0-1.el9 enterprisedb-enterprise           18 k
+ edb-as15-server-indexadvisor
+                             x86_64 15.4.0-1.el9 enterprisedb-enterprise           69 k
+ edb-as15-server-libs        x86_64 15.4.0-1.el9 enterprisedb-enterprise          669 k
+ edb-as15-server-plperl      x86_64 15.4.0-1.el9 enterprisedb-enterprise           69 k
+ edb-as15-server-plpython3   x86_64 15.4.0-1.el9 enterprisedb-enterprise          108 k
+ edb-as15-server-pltcl       x86_64 15.4.0-1.el9 enterprisedb-enterprise           46 k
+ edb-as15-server-sqlprotect  x86_64 15.4.0-1.el9 enterprisedb-enterprise          112 k
+ lz4                         x86_64 1.9.3-5.el9  rhel-9-for-x86_64-baseos-rpms     62 k
+
+Transaction Summary
+========================================================================================
+Install  17 Packages
+
+Total download size: 16 M
+Installed size: 62 M
+Downloading Packages:
+(1/17): edb-as15-server-15.4.0-1.el9.x86_64.rpm         4.6 kB/s | 9.8 kB     00:02
+(2/17): edb-as15-pgagent-4.2.2-1.el9.x86_64.rpm          47 kB/s | 125 kB     00:02
+(3/17): edb-as15-server-contrib-15.4.0-1.el9.x86_64.rpm 166 kB/s | 746 kB     00:04
+(4/17): edb-as15-server-client-15.4.0-1.el9.x86_64.rpm  212 kB/s | 1.4 MB     00:06
+(5/17): edb-as15-server-docs-15.4.0-1.el9.x86_64.rpm    4.9 kB/s |  18 kB     00:03
+(6/17): edb-as15-server-core-15.4.0-1.el9.x86_64.rpm    542 kB/s | 6.5 MB     00:12
+(7/17): edb-as15-server-indexadvisor-15.4.0-1.el9.x86_6  16 kB/s |  69 kB     00:04
+(8/17): edb-as15-server-devel-15.4.0-1.el9.x86_64.rpm   671 kB/s | 6.2 MB     00:09
+(9/17): edb-as15-server-plperl-15.4.0-1.el9.x86_64.rpm   45 kB/s |  69 kB     00:01
+(10/17): edb-as15-server-libs-15.4.0-1.el9.x86_64.rpm   302 kB/s | 669 kB     00:02
+(11/17): edb-as15-server-plpython3-15.4.0-1.el9.x86_64.  67 kB/s | 108 kB     00:01
+(12/17): edb-as15-server-pltcl-15.4.0-1.el9.x86_64.rpm   33 kB/s |  46 kB     00:01
+(13/17): edb-as15-server-sqlprotect-15.4.0-1.el9.x86_64  75 kB/s | 112 kB     00:01
+(14/17): lz4-1.9.3-5.el9.x86_64.rpm                     6.0 kB/s |  62 kB     00:10
+(15/17): boost-date-time-1.75.0-8.el9.x86_64.rpm        1.5 kB/s |  15 kB     00:10
+(16/17): boost-chrono-1.75.0-8.el9.x86_64.rpm           2.8 kB/s |  26 kB     00:09
+(17/17): boost-atomic-1.75.0-8.el9.x86_64.rpm           7.6 kB/s |  19 kB     00:02
+----------------------------------------------------------------------------------------
+Total                                                   541 kB/s |  16 MB     00:30
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                1/1
+  Installing       : edb-as15-server-libs-15.4.0-1.el9.x86_64                      1/17
+  Running scriptlet: edb-as15-server-libs-15.4.0-1.el9.x86_64                      1/17
+  Installing       : edb-as15-server-client-15.4.0-1.el9.x86_64                    2/17
+  Running scriptlet: edb-as15-server-client-15.4.0-1.el9.x86_64                    2/17
+  Installing       : edb-as15-server-contrib-15.4.0-1.el9.x86_64                   3/17
+  Running scriptlet: edb-as15-server-core-15.4.0-1.el9.x86_64                      4/17
+  Installing       : edb-as15-server-core-15.4.0-1.el9.x86_64                      4/17
+  Running scriptlet: edb-as15-server-core-15.4.0-1.el9.x86_64                      4/17
+  Installing       : edb-as15-server-indexadvisor-15.4.0-1.el9.x86_64              5/17
+  Running scriptlet: edb-as15-server-indexadvisor-15.4.0-1.el9.x86_64              5/17
+  Installing       : edb-as15-server-plperl-15.4.0-1.el9.x86_64                    6/17
+  Installing       : edb-as15-server-plpython3-15.4.0-1.el9.x86_64                 7/17
+  Installing       : edb-as15-server-pltcl-15.4.0-1.el9.x86_64                     8/17
+  Installing       : edb-as15-server-sqlprotect-15.4.0-1.el9.x86_64                9/17
+  Running scriptlet: edb-as15-server-sqlprotect-15.4.0-1.el9.x86_64                9/17
+  Installing       : edb-as15-server-devel-15.4.0-1.el9.x86_64                    10/17
+  Installing       : boost-atomic-1.75.0-8.el9.x86_64                             11/17
+  Installing       : boost-chrono-1.75.0-8.el9.x86_64                             12/17
+  Installing       : boost-date-time-1.75.0-8.el9.x86_64                          13/17
+  Installing       : edb-as15-pgagent-4.2.2-1.el9.x86_64                          14/17
+  Running scriptlet: edb-as15-pgagent-4.2.2-1.el9.x86_64                          14/17
+  Installing       : lz4-1.9.3-5.el9.x86_64                                       15/17
+  Installing       : edb-as15-server-docs-15.4.0-1.el9.x86_64                     16/17
+  Installing       : edb-as15-server-15.4.0-1.el9.x86_64                          17/17
+  Running scriptlet: edb-as15-server-15.4.0-1.el9.x86_64                          17/17
+  Verifying        : edb-as15-pgagent-4.2.2-1.el9.x86_64                           1/17
+  Verifying        : edb-as15-server-15.4.0-1.el9.x86_64                           2/17
+  Verifying        : edb-as15-server-client-15.4.0-1.el9.x86_64                    3/17
+  Verifying        : edb-as15-server-contrib-15.4.0-1.el9.x86_64                   4/17
+  Verifying        : edb-as15-server-core-15.4.0-1.el9.x86_64                      5/17
+  Verifying        : edb-as15-server-devel-15.4.0-1.el9.x86_64                     6/17
+  Verifying        : edb-as15-server-docs-15.4.0-1.el9.x86_64                      7/17
+  Verifying        : edb-as15-server-indexadvisor-15.4.0-1.el9.x86_64              8/17
+  Verifying        : edb-as15-server-libs-15.4.0-1.el9.x86_64                      9/17
+  Verifying        : edb-as15-server-plperl-15.4.0-1.el9.x86_64                   10/17
+  Verifying        : edb-as15-server-plpython3-15.4.0-1.el9.x86_64                11/17
+  Verifying        : edb-as15-server-pltcl-15.4.0-1.el9.x86_64                    12/17
+  Verifying        : edb-as15-server-sqlprotect-15.4.0-1.el9.x86_64               13/17
+  Verifying        : lz4-1.9.3-5.el9.x86_64                                       14/17
+  Verifying        : boost-date-time-1.75.0-8.el9.x86_64                          15/17
+  Verifying        : boost-chrono-1.75.0-8.el9.x86_64                             16/17
+  Verifying        : boost-atomic-1.75.0-8.el9.x86_64                             17/17
+Installed products updated.
+
+Installed:
+  boost-atomic-1.75.0-8.el9.x86_64
+  boost-chrono-1.75.0-8.el9.x86_64
+  boost-date-time-1.75.0-8.el9.x86_64
+  edb-as15-pgagent-4.2.2-1.el9.x86_64
+  edb-as15-server-15.4.0-1.el9.x86_64
+  edb-as15-server-client-15.4.0-1.el9.x86_64
+  edb-as15-server-contrib-15.4.0-1.el9.x86_64
+  edb-as15-server-core-15.4.0-1.el9.x86_64
+  edb-as15-server-devel-15.4.0-1.el9.x86_64
+  edb-as15-server-docs-15.4.0-1.el9.x86_64
+  edb-as15-server-indexadvisor-15.4.0-1.el9.x86_64
+  edb-as15-server-libs-15.4.0-1.el9.x86_64
+  edb-as15-server-plperl-15.4.0-1.el9.x86_64
+  edb-as15-server-plpython3-15.4.0-1.el9.x86_64
+  edb-as15-server-pltcl-15.4.0-1.el9.x86_64
+  edb-as15-server-sqlprotect-15.4.0-1.el9.x86_64
+  lz4-1.9.3-5.el9.x86_64
+
+Complete!
+
+```
 - Create password
 ```
 passwd enterprisedb
+```
+  - Output
+```
+Changing password for user enterprisedb.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
 ```
 ## (Additional) Install an individual component
 ```
@@ -109,11 +253,19 @@ https://www.enterprisedb.com/docs/epas/latest/installing/linux_install_details/r
 ## Initial configuration
 ```
 PGSETUP_INITDB_OPTIONS="-E UTF-8" /usr/edb/as15/bin/edb-as-15-setup initdb
+```
+- Output
+```
+Initializing database ... OK
+```
+- Start EDB
+```
 systemctl start edb-as-15
 ```
 ## Connect database
 ```
 su - enterprisedb
-ALTER ROLE enterprisedb IDENTIFIED BY 123qwe;
+psql edb
+ALTER ROLE enterprisedb IDENTIFIED BY '123qwe';
 ```
 ## Experiment
