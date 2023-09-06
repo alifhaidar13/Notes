@@ -38,9 +38,13 @@
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86
 ## Post Installation
 ### Subscription Register
+- Sign in
 ```
 subscription-manager register --username=<username> --password=<password>
 subscription-manager status
+```
+- Set Syspurpose
+```
 subscription-manager syspurpose role --set "Red Hat Enterprise Linux Server"
 subscription-manager syspurpose service-level --set "Self-Support"
 subscription-manager syspurpose usage --set "Development/Test
@@ -48,7 +52,7 @@ subscription-manager syspurpose --show"
 ```
 ### Update
 ```
-dnf update
+dnf -y update
 reboot
 ```
 ### Install Guest Addition
@@ -65,17 +69,23 @@ dnf list installed | grep elfutils-libelf-devel
 ```
 dnf groupinstall "Development Tools"
 dnf install kernel-devel elfutils-libelf-devel
-
 #Then Install Guest Addition
 ```
 ### Enable SSHD
+- Open file
 ```
 vi /etc/ssh/sshd_config
+```
+- Edit to
+```
 PermitRootLogin yes
 PasswordAuthentication yes
+```
+- Restart
+```
 systemctl reload sshd.service
 ```
-### Install Cockpit
+### Install Cockpit (Optional)
 ```
 dnf install cockpit
 systemctl enable --now cockpit.socket
