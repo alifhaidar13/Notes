@@ -1,5 +1,6 @@
 
 # Installation
+<!--
 ## Install on Docker
 ### Example code
 ```
@@ -20,6 +21,7 @@ Enter
 docker start conpg1
 docker exec -it conpg1 psql -U postgres
 ```
+-->
 ## Install on RHEL 9
 ### Postgresql v15
 ```
