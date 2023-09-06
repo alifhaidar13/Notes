@@ -67,8 +67,8 @@ dnf list installed | grep elfutils-libelf-devel
 ```
 - Install Development Tools and kernel-devel 
 ```
-dnf groupinstall "Development Tools"
-dnf install kernel-devel elfutils-libelf-devel
+dnf -y groupinstall "Development Tools"
+dnf -y install kernel-devel elfutils-libelf-devel
 #Then Install Guest Addition
 ```
 ### Enable SSHD
