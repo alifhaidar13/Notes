@@ -1,13 +1,14 @@
 # Configuring storage for a mount point file system
-## Recommended Size (minimum)
+## Requirement (minimum)
 ### Mandatory Volumes
-  - /boot    : 500 MiB - 1 GiB
-  - /        : 5-10 GiB
-  - /home    : 500 MiB - 1 GiB
-  - /swap    :
+  - /boot    : 1 GiB
+  - /        : 5-10 GiB (Depends)
+  - /home    : 1 GiB
+  - swap    :
   	- RAM<2 		= 2*RAM
     - 2<RAM<8 	= 1*RAM
     - 8<RAM<64 	= 4-0.5*RAM  
+<!--
 ### Recommended
   - /boot/efi   : 200 MiB
   - PRep        : 8 MiB
@@ -19,24 +20,22 @@
   - /u01    : 22 GiB
 ### for PostgreSQL
   - /var/lib/pgsql/data : 1 GiB
-### My Setting
-  - /boot  : 500 MiB
-  - /home  : 500 MiB
-  - /      : 5 GiB +
-    - Oracle      => 25 GiB
-    - Postgresql  => 5 GiB
-    - EDB         => 5 GiB
-  - /swap  : 8 GiB
-  - /tmp   : 2 GiB
-```
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86
-```
-## Other Requirement
-
+-->
+### Other Requirement
 - RAM : 4 GiB
 - Disk : 10-20 GiB
 - Graphic : 1026x768
+### My Setting (VBox)
+  - /boot  : 1 GiB <!--   - /home  : 500 MiB -->
+  - /      : 10 GiB +
+    - Oracle      => 25 GiB
+    - Postgresql  => 5 GiB
+    - EDB         => 5 GiB
+  - swap  : 8 GiB
+  -  RAM : 8192 MB
+  -  Graphic : 128 MB
 
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86
 ## Post Installation
 ### Subscription Register
 ```
@@ -53,7 +52,6 @@ dnf update
 reboot
 ```
 ### Install Guest Addition
-
 - Check grouplist Development Tools
 ```
 dnf grouplist installed | grep Dev*
@@ -88,9 +86,9 @@ firewall-cmd --reload
 ```
 cat /etc/cockpit/disallowed-users
 #List of users which are not allowed to login to Cockpit
-root     <-REMOVE
+root     <= REMOVE OR ADD '#'
 ```
-### Addtional
+### Addtional (if not installing cockpit)
 ```
 ln -sfn /dev/null /etc/motd.d/cockpit
 vi /etc/pam.d/sshd
