@@ -81,6 +81,12 @@ vi /etc/ssh/sshd_config
 PermitRootLogin yes
 PasswordAuthentication yes
 ```
+- For X11
+```
+X11Forwarding yes
+X11DisplayOffset 10
+X11UseLocalhost yes
+```
 - Restart
 ```
 systemctl reload sshd.service
