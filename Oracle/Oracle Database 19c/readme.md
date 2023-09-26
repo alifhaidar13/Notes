@@ -516,10 +516,17 @@ EOF
 
 # Troubleshoot
 yum repolist
+
 yum repolist -v
+
 yum repolist all
+
 yum list available
+
 yum list available | more
+
 yum list installed
+
 cat /etc/os-release
+
 lscpu
