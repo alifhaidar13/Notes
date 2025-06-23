@@ -19,3 +19,5 @@ SELECT
     ROUND(SUM(size * 8 / 1024.0 / 1024.0), 2) AS [Total Size (GB)]
 FROM
     sys.master_files;
+
+-- Test add comment
